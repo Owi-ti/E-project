@@ -15,7 +15,7 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
 
     ): View? {
-        // Inflate the layout for this fragment
+//         Inflate the layout for this fragment
 //        binding=ActivityHomeBinding.inflate(layoutInflater)
 //        binding.root
         return inflater.inflate(R.layout.fragment_home, container, false)
@@ -23,6 +23,8 @@ class HomeFragment : Fragment() {
     }
 
     fun displayImages(){
+        val images = listOf(R.drawable.gglelogo, R.drawable.fblogo, R.drawable.ic_baseline_shopping_cart_24)
+        val adapter=HomeRvAdapter(images)
         var image=Home("")
 }
 

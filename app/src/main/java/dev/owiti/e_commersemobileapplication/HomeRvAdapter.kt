@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 
-class HomeRvAdapter(var image_List:List<Image>):RecyclerView.Adapter<HomeViewHolder>() {
+class HomeRvAdapter(var image_List:List<Int>):RecyclerView.Adapter<HomeViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeViewHolder {
         var itemview=LayoutInflater.from(parent.context).inflate(R.layout.home_images_item,parent,false)
         return HomeViewHolder(itemview)
@@ -16,6 +16,7 @@ class HomeRvAdapter(var image_List:List<Image>):RecyclerView.Adapter<HomeViewHol
 
     override fun onBindViewHolder(holder: HomeViewHolder, position: Int) {
         var currentImage= image_List.get(position)
+        holder.ivIsland.setImageResource(currentImage)
 
     }
 
